@@ -6,3 +6,4 @@
 - Install Tailwind CSS
 - Install Daisy UI
 - Add NavBar component to App.jsx
+- React Router[Refs]
