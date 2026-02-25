@@ -14,7 +14,7 @@ function App() {
     <BrowserRouter basename="/">
       <Routes>
         <Route path="/" element={<Body/>}>
-          <Route path="login" element={<Feed/>}/>              {/*these are the childern routes of Body*/}
+          <Route path="feed" element={<Feed/>}/>              {/*these are the childern routes of Body*/}
           <Route path="login" element={<Login/>}/>              {/*these are the childern routes of Body*/}
           <Route path="profile" element={<Profile/>}/>
         </Route>
