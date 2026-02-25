@@ -7,3 +7,17 @@
 - Install Daisy UI
 - Add NavBar component to App.jsx
 - React Router[Refs]
+
+
+
+
+
+
+
+
+
+- install axios
+- cors - install cors in backend => add  middleware to with configuration: origin, credentials:true
+- whenever you're making API call so pass axios => {withCredentials:true}
+
+- install Redux toolkit - https://redux-toolkit.js.org/tutorials/quick-start [important]
