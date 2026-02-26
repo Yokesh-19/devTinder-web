@@ -6,6 +6,7 @@ import Login from "./components/Login"
 import Profile from "./components/Profile"
 import appStore from "./utils/appStore"
 import Connections from "./components/Connections"
+import Requests from "./components/Requests"
 
 function App() {
 
@@ -19,7 +20,7 @@ function App() {
           <Route path="login" element={<Login/>}/>              {/*these are the childern routes of Body*/}
           <Route path="profile" element={<Profile/>}/>
           <Route path="connections" element={<Connections/>}/>
-          <Route path="requests" element={<Profile/>}/>
+          <Route path="requests" element={<Requests/>}/>
         </Route>
       </Routes>
     </BrowserRouter>

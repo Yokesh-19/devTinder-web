@@ -3,10 +3,13 @@ import React, { useEffect } from 'react'
 import { BASE_URL } from '../utils/constants'
 import { useDispatch, useSelector } from 'react-redux'
 import { addConnections } from '../utils/connectionSlice'
+import { useNavigate } from 'react-router-dom'
 
 
 const Connections = () => {
   const connections = useSelector((store) => store.connections);
+
+  const navigate =useNavigate();
 
   const dispatch = useDispatch();
 
@@ -19,7 +22,8 @@ const Connections = () => {
        }
         catch(err)
         {
-          Navigate("/Error");
+          console.log(err);
+          navigate("/Error");
         }
     }
 
@@ -42,10 +46,10 @@ const Connections = () => {
       <h1 className='text-bold text-black text-4xl'>Connections</h1>
 
       {connections.map((connection) =>{
-        const {firstName, lastName, photourl, age, gender} = connection;
-
+        const {_id, firstName, lastName, photourl, age, gender} = connection;
+ 
         return (
-        <div className=' flex m-4 p-4 rounded-lg bg-base-300 w-1/2 mx-auto'>
+        <div key={_id} className=' flex m-4 p-4 rounded-lg bg-base-300 w-1/2 mx-auto'>
           <div>
             <img alt="photo" className='w-20 h-20 rounded-full' src={photourl}/>
           </div>
@@ -54,11 +58,13 @@ const Connections = () => {
             <h2  className='font-bold text-xl'>{firstName + " " + lastName}</h2>
             {age && gender && <p>{age + " "+gender}</p>}
           </div>
+
+          
           
         </div>
       )})}
     </div>
-  )
+  );
 }
 
 export default Connections
