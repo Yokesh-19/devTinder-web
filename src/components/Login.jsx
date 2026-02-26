@@ -20,7 +20,6 @@ const Login = () => {
         password,
       },{withCredentials:true}                  //To see the cookies
     );
-    console.log(res.data);
     dispatch(addUser(res.data));
     return navigate("/feed");
     }
